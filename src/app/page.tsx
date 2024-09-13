@@ -6,15 +6,14 @@ export default function Home() {
 
      <main className={styles.main}>
       <div className={styles.description}>
-
-    <p> Ally's website is coming soon...</p>
+        <h1>
+        <img src="./favicon.ico" alt="icon image" />
+        </h1>
+        <h2>
+        <p> Ally's website is coming soon...</p>
+        </h2>
       </div>
-  
-
-
       <div className={styles.grid}>
-
-
       </div>
     </main>
   );
