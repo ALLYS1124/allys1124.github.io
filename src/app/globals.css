@@ -9,11 +9,17 @@ body {
   color:#00000040;
 }
 h1 {
-  color:#9898ca
+  color:#9898ca;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h2{
+  color: rgb(183, 206, 224);
+
 }
+
+
