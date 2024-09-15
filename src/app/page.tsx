@@ -7,9 +7,13 @@ export default function Home() {
      <main className={styles.main}>
       <div className={styles.description}>
         <h1>
+        <p> Ally Santana</p>
+        </h1>
+
+        <h2> 
         <img src="./favicon.ico" alt="icon image" />
         <p> Ally's website is coming soon...</p>
-        </h1>
+        </h2>
       </div>
       <div className={styles.grid}>
       </div>
