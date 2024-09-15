@@ -8,13 +8,14 @@ export default function Home() {
       <div className={styles.description}>
         <h1>
         <img src="./favicon.ico" alt="icon image" />
-        </h1>
-        <h2>
         <p> Ally's website is coming soon...</p>
-        </h2>
+        </h1>
       </div>
       <div className={styles.grid}>
       </div>
     </main>
   );
 }
+
+
+
