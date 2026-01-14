@@ -12,14 +12,14 @@ body {
 body {
   color:#00000040;
 }
-h1 {
+/* h1 {
   color:rgb(69, 109, 169);
   position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
   z-index: 99;
-}
+} */
 
 h2{
   color:rgb(176, 190, 209);
@@ -29,6 +29,5 @@ h2{
 h2 img{
   height:100px;
   width: 30%;
-
 }
 
