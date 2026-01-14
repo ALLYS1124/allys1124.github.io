@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
+.container {
+  min-height: 100vh;
+  background-color: #F8F6EF;
+  font-family: 'GFS Didot', serif;
+  color: #456DA9;
+  transition: filter 0.3s ease;
+}
+
+.container.blurred {
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  z-index: 100;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #456DA9;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  display: block;
+}
+
+.hamburger span.open:nth-child(1) {
+  transform: rotate(45deg) translate(1px, 11px);
+}
+
+.hamburger span.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger span.open:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, -11px);
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  color: #456DA9;
+  font-family: 'GFS Didot', serif;
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.5rem;
+}
+
+.nav a {
+  color: #456DA9;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-family: 'GFS Didot', serif;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownToggle {
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F8F6EF;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(69, 109, 169, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 150px;
+  z-index: 1000;
+  margin-top: 0.5rem;
+}
+
+.dropdownMenu button {
+  background: none;
+  border: none;
+  color: #456DA9;
+  font-family: 'GFS Didot', serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.dropdownMenu button:hover {
+  opacity: 0.7;
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+}
+
+.artworkSection,
+.photographySection {
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.artworkItem {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.artworkItem img {
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.artworkItem:hover img {
+  transform: scale(1.05);
+}
+
+.divider {
+  width: 100%;
+  background-color: #8395B8;
+  padding: 4rem 2rem;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.divider h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  color: #F8F6EF;
+  font-family: 'GFS Didot', serif;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .logoSection {
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F8F6EF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 90;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 2rem;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdownMenu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+
+  .dropdownMenu button {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .divider {
+    padding: 2rem 1rem;
+  }
+
+  .divider h2 {
+    font-size: 1.8rem;
+  }
+
+  .navButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navButton svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navButtonLeft,
+  .navButtonRight {
+    display: none;
+  }
+
+  .mobileNavButtons {
+    display: none;
+  }
+
+  .mobileNavButton {
+    display: none;
+  }
+
+  .lightboxContent {
+    gap: 1.5rem;
+  }
+
+  .lightboxImage {
+    max-width: 85vw;
+    max-height: 70vh;
+  }
+
+  .lightboxImage img {
+    max-width: 85vw;
+    max-height: 70vh;
+  }
+}
+
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(248, 246, 239, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.lightboxContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  cursor: default;
+}
+
+.lightboxImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80vw;
+  max-height: 85vh;
+}
+
+.lightboxImage img {
+  max-width: 80vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navButton {
+  background-color: transparent;
+  border: 3px solid #456DA9;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.navButton:hover {
+  background-color: #456DA9;
+}
+
+.navButton svg {
+  color: #456DA9;
+  transition: color 0.3s ease;
+}
+
+.navButton:hover svg {
+  color: #F8F6EF;
+}
+
+.navButtonLeft,
+.navButtonRight {
+  display: flex;
+}
+
+.mobileNavButtons {
+  display: none;
+}
