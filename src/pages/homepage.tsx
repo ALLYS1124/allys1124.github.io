@@ -8,21 +8,34 @@ import logo from '../app/logo.svg';
 // Import Artwork images
 import a1 from '../artImages/a1.jpg';
 import a2 from '../artImages/a2.jpg';
-import img1 from '../artImages/1.jpg';
-import img2 from '../artImages/2.jpg';
-import img3 from '../artImages/3.jpg';
-import img4 from '../artImages/4.jpg';
-import img5 from '../artImages/5.jpg';
-import img6 from '../artImages/6.jpg';
-import img7 from '../artImages/7.jpg';
-import img8 from '../artImages/9.jpeg';
-import img9 from '../artImages/10.jpg';
-import img10 from '../artImages/11.jpg';
-import img11 from '../artImages/12.jpg';
-import img12 from '../artImages/13.jpg';
+import a3 from '../artImages/a3.jpg';
+import a4 from '../artImages/a4.jpeg';
+import a5 from '../artImages/a5.jpg';
+import a6 from '../artImages/a6.jpg';
+import a7 from '../artImages/a7.jpg';
+import a8 from '../artImages/a8.jpg';
+import a9 from '../artImages/a9.jpg';
+import a10 from '../artImages/a10.jpg';
+import a11 from '../artImages/a11.jpg';
+import a12 from '../artImages/a12.jpg';
+import a13 from '../artImages/a13.png';
+import a14 from '../artImages/a14.jpg';
+import a15 from '../artImages/a15.jpg';
 
-const artworkImages = [a1, a2, img1, img2, img3, img4];
-const photographyImages = [img5, img6, img7, img8, img9, img10, img11, img12];
+// Import Photography images
+import p1 from '../artImages/p1.jpg';
+import p2 from '../artImages/p2.jpg';
+import p3 from '../artImages/p3.jpg';
+import p4 from '../artImages/p4.jpg';
+import p5 from '../artImages/p5.jpg';
+import p6 from '../artImages/p6.jpg';
+import p7 from '../artImages/p7.jpg';
+import p8 from '../artImages/p8.jpg';
+import p9 from '../artImages/p9.jpg';
+import p10 from '../artImages/p10.jpg';
+
+const artworkImages = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15];
+const photographyImages = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
 
 export default function Homepage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -130,7 +143,11 @@ export default function Homepage() {
             <h1 className={styles.title}>Ally Santana</h1>
           </div>
 
-          <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
+          <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`} onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setMenuOpen(false);
+            }
+          }}>
             <a href="#home" onClick={() => { setMenuOpen(false); }}>Home</a>
             <div
               className={styles.dropdown}

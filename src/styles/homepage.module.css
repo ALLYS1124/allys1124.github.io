@@ -34,7 +34,7 @@
   position: absolute;
   left: 2rem;
   top: 2rem;
-  z-index: 100;
+  z-index: 101;
 }
 
 .hamburger span {
@@ -158,6 +158,9 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .artworkItem img {
@@ -193,6 +196,12 @@
 
   .header {
     padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F8F6EF;
+    z-index: 100;
   }
 
   .logoSection {
@@ -217,16 +226,36 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #F8F6EF;
+    background-color: rgba(248, 246, 239, 0.98);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    z-index: 90;
+    z-index: 95;
   }
 
   .navOpen {
     display: flex;
+  }
+
+  .nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    cursor: pointer;
+  }
+
+  .nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    cursor: pointer;
   }
 
   .nav a {
@@ -249,12 +278,13 @@
   }
 
   .dropdownMenu button {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   .main {
     padding: 1rem;
+    padding-top: 6rem;
   }
 
   .grid {
